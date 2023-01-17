@@ -8,6 +8,9 @@
 
 // Your code:
 
+function total(numbers) {
+    return numbers.reduce((acc, val) => acc + val, 0);
+}
 //* Begin of tests
 const assert = require('assert');
 

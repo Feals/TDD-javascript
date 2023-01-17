@@ -7,10 +7,20 @@
  */
 
 // Your code:
+const rand = Math.random();
+let finalValue =0;
+function add(numberOne, Number2)
+{
+    finalValue = numberOne + Number2;
+    return finalValue;
+};
 
+console.log(add.length);
+console.log(add(2, 2));
+console.log(add(rand, rand));
 //* Begin of tests
 const assert = require('assert');
-const rand = Math.random();
+
 
 assert.strictEqual(typeof add, 'function');
 assert.strictEqual(add.length, 2);

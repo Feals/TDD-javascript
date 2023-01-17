@@ -10,7 +10,34 @@
  */
 
 // Your code:
+function multiply(a, b) {
+    if (a === 0) {
+      return 0;
+    } else if (b === 0) {
+        return 0;
+    }    
+    else if (a > 0 &&  b > 0){
+      return a + multiply(a, b-1);
+    } 
+    
+    else if (a > 0  && b < 0){
+        return -a + multiply(a, b+1);
+      } 
+      
+      else if (a < 0 && b > 0){
+        return a + multiply(a, b-1);
 
+  } else if (a < 0 && b < 0){
+    return -a + multiply(a, b+1);}}
+
+    console.log(multiply(34, 78));
+    console.log(multiply(123, 0));
+    console.log(multiply(0, -230));
+    console.log(multiply(0, 0));
+    console.log(multiply(123, -22));
+    console.log(multiply(-22, 123));
+    console.log(multiply(-22, -123));
+    
 //* Begin of tests
 const assert = require('assert');
 

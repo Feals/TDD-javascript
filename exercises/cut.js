@@ -11,9 +11,29 @@
  */
 
 // Your code:
+function cutFirst(str) {
+    return str.slice(2);
+  };
+  
+  function cutLast(str) {
+    return str.slice(0, -2);
+  };
+  
+  function cutFirstLast(str) {
+    return str.slice(2, -2);};
+
+    console.log(cutFirst('testOnThisString'));
+    console.log(cutLast('testOnThisString'));
+    console.log(cutFirstLast('testOnThisString'));
 
 //* Begin of tests
 const assert = require('assert');
 
-assert.fail('You must write your own tests');
+assert.strictEqual(typeof cutFirst, 'function', 'Should be a function');
+assert.strictEqual(typeof cutLast, 'function', 'Should be a function');
+assert.strictEqual(typeof cutFirstLast, 'function', 'Should be a function');
+
+assert.strictEqual(cutFirst('testOnThisString'), 'stOnThisString');
+assert.strictEqual(cutLast('testOnThisString'), 'testOnThisStri');
+assert.strictEqual(cutFirstLast('testOnThisString'), 'stOnThisStri');
 // End of tests */
